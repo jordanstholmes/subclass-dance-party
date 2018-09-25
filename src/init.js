@@ -23,11 +23,11 @@ $(document).ready(function() {
     // make a dancer with a random position
 
     var dancer = new dancerMakerFunction(
-      $("body").height() * Math.random(),
-      $("body").width() * Math.random(),
-      Math.random() * 1000
+      $("body").height() * Math.random(), //Get a random height
+      $("body").width() * Math.random(), // Get a random width
+      Math.random() * 1000 // get a random duration for blinking
     );
-    $('body').append(dancer.$node);
+    $('body').append(dancer.$node); //add the jquery element to the HTML
   });
 });
 

@@ -23,6 +23,24 @@ body, a:link, a:visited, a:active{
 .dancer{
   /*border:10px solid red;
   border-radius:10px;*/
+  /*width:168px;
+  height: 190px;*/
+  position:absolute;
+}
+
+.charmander{
+  width:168px;
+  height: 190px;
+  position:absolute;
+}
+
+.squirtle{
+  width: 256px;
+  height: 192px;
+  position:absolute;
+}
+
+.bulbasaur{
   width:168px;
   height: 190px;
   position:absolute;

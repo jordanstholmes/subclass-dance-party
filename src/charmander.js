@@ -1,5 +1,5 @@
 var makeCharmanderDancer = function(top, left, timeBetweenSteps) {
-  
+  this.$node = $('<img src="assets/charchar.png" class="dancer charmander">');
   makeDancer.apply(this, arguments);
   this.wiggle();
 };
