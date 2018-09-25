@@ -23,7 +23,7 @@ makeCharmanderDancer.prototype.wiggle = function() {
 
       degree+= direction;
       rotate();
-    }, 5);
+    }, 10);
   };
 
   rotate();
