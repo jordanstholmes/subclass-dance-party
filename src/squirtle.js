@@ -1,8 +1,12 @@
 var makeSquirtleDancer = function(top, left, timeBetweenSteps) {
+  let squirtleClicked = this;
   this.$node = $('<img src="assets/squirtle-cool.png" class="dancer squirtle">');
   makeDancer.apply(this, arguments);
+  this.color = 'blue';
+  this.kills = ".charmander";
   this.jump();
   this.$node.click(function() {
+    squirtleClicked.clicked();
   });
 };
 
@@ -31,32 +35,12 @@ makeSquirtleDancer.prototype.jump = function() {
       moveUp();
     });
   };
-
   moveUp();
-  // moveDown();
-  // let moveDown = function() {};
-
-  
 };
-
-// makeSquirtleDancer.prototype.wiggle = function() {
-//   var degree = 0;
-//   var direction = 1;
-//   var thisElement = this.$node;
-
-//   let rotate = function () {
-//     thisElement.css({WebkitTransform: 'rotate(' + degree + 'deg)'});
-//     setTimeout(function() {
-//       if(degree >= 10) {
-//         direction = -1;
-//       } else if (degree <= -10) {
-//         direction = 1;
-//       }
-
-//       degree+= direction;
-//       rotate();
-//     }, 10);
-//   };
-
-//   rotate();
+// makeSquirtleDancer.prototype.clicked = function () {
+//   $(".background").css("background-color", "blue");
+//   $(".backgroundImage").fadeOut();
+//   $(".backgroundImage").fadeIn();
+//   $(".backgroundImage").fadeOut();
+//   $(".backgroundImage").fadeIn();
 // };

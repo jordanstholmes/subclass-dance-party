@@ -32,3 +32,19 @@ makeDancer.prototype.lineUp = function () {
     top: "600"
   }, 1000); 
 };
+
+makeDancer.prototype.clicked = function () {
+  $(".background").css("background-color", this.color);
+  $(".backgroundImage").fadeOut();
+  $(".backgroundImage").fadeIn();
+  $(".backgroundImage").fadeOut();
+  $(".backgroundImage").fadeIn();
+
+  
+  $(this.kills).remove();
+/*
+ we want to remove the pokemon html elements that are weak to the element that was clicked.
+
+*/
+
+};

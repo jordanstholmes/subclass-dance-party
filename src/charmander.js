@@ -1,9 +1,13 @@
 var makeCharmanderDancer = function(top, left, timeBetweenSteps) {
+  let charmanderClicked = this;
   this.$node = $('<img src="assets/charchar.png" class="dancer charmander">');
-  this.$node.click(function() {
-  });
   makeDancer.apply(this, arguments);
+  this.color = 'red';
+  this.kills = '.bulbasaur';
   this.wiggle();
+  this.$node.click(function() {
+    charmanderClicked.clicked();
+  });
 };
 
 makeCharmanderDancer.prototype = Object.create(makeDancer.prototype);
@@ -27,9 +31,18 @@ makeCharmanderDancer.prototype.wiggle = function() {
       rotate();
     }, 10);
   };
-
   rotate();
 };
+
+
+// makeCharmanderDancer.prototype.clicked = function () {
+//   $(".background").css("background-color", "red");
+//   $(".background").css("background-color", this.color);
+//   $(".backgroundImage").fadeOut();
+//   $(".backgroundImage").fadeIn();
+//   $(".backgroundImage").fadeOut();
+//   $(".backgroundImage").fadeIn();
+// };
 
 /*
 var degree = 0;
