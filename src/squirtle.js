@@ -9,12 +9,30 @@ makeSquirtleDancer.prototype.constructor = makeSquirtleDancer;
 
 makeSquirtleDancer.prototype.jump = function() {
   // var currentTop = this.$node.css("top"); // 300
-  debugger;
-  let node = this.$node;
+  let node = this.$node; //This squirtle element
+  let squirtle = this;
 
-  setTimeout(function() {
-    node.css("top", 500);
-  }, 2000);
+  let moveUp = function() {
+    node.animate({ // node is the HTML squirtle, and we're animating it
+      top: "-=100"  // we're subtracting 100 from the space above html squirtle
+    }, 500, function(){
+      moveDown(); 
+    });
+  };
+
+  let moveDown = function () {
+    node.animate({
+      top: "+=100"
+    }, 500, function() {
+      moveUp();
+    });
+  };
+
+  moveUp();
+  // moveDown();
+  // let moveDown = function() {};
+
+  
 };
 
 // makeSquirtleDancer.prototype.wiggle = function() {
