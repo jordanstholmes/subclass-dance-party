@@ -39,9 +39,7 @@ makeDancer.prototype.clicked = function () {
   $(".backgroundImage").fadeIn();
   $(".backgroundImage").fadeOut();
   $(".backgroundImage").fadeIn();
-
-  
-  $(this.kills).remove();
+  $(this.kills).fadeOut(2000);
 /*
  we want to remove the pokemon html elements that are weak to the element that was clicked.
 
