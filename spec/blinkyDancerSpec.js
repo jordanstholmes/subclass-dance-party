@@ -30,5 +30,27 @@ describe('blinkyDancer', function() {
       clock.tick(timeBetweenSteps);
       expect(blinkyDancer.step.callCount).to.be.equal(2);
     });
+
+    it('should have a function to line up', function() {
+      
+      expect(blinkyDancer.lineUp).to.exist;
+    });
+
+    it('should make all dancers line up when roll call is clicked', function() {
+      new makeCharmanderDancer(50, 100);
+      new makeSquirtleDancer(60, 80);
+      new makeBulbasaurDancer(10, 20);
+      rollCallFunction();
+      var dancers = $(".dancer");
+      var allPass = true;
+
+      for (let i = 0; i < dancers.length; i++) {
+        if (dancers[i].css('top') !== 600) {
+          allPass = false;
+        }
+      }
+
+      expect(allPass).to.be.true;
+    });
   });
 });

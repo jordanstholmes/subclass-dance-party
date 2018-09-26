@@ -2,9 +2,7 @@ $(document).ready(function() {
   window.dancers = [];
 
   $('.rollCall').on('click', function(event) {
-    for (let i =0; i < window.dancers.length; i++) {
-      window.dancers[i].lineUp();
-    }
+    rollCallFunction();
   });
   
   
@@ -41,4 +39,10 @@ $(document).ready(function() {
     $('body').append(dancer.$node); //add the jquery element to the HTML
   });
 });
+
+var rollCallFunction = function() {
+  for (let i =0; i < window.dancers.length; i++) {
+    window.dancers[i].lineUp();
+  }
+};
 
