@@ -1,6 +1,13 @@
 $(document).ready(function() {
   window.dancers = [];
 
+  $('.rollCall').on('click', function(event) {
+    for (let i =0; i < window.dancers.length; i++) {
+      window.dancers[i].lineUp();
+    }
+  });
+  
+
   $('.addDancerButton').on('click', function(event) {
     /* This function sets up the click handlers for the create-dancer
      * buttons on dancefloor.html. You should only need to make one small change to it.
@@ -27,6 +34,9 @@ $(document).ready(function() {
       $("body").width() * Math.random(), // Get a random width
       Math.random() * 1000 // get a random duration for blinking
     );
+
+    window.dancers.push(dancer);
+
     $('body').append(dancer.$node); //add the jquery element to the HTML
   });
 });

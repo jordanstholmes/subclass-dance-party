@@ -34,6 +34,10 @@ body, a:link, a:visited, a:active{
   height: 190px;*/
   position:absolute;
 }
+.rollCall {
+  padding: 5px 12px;
+  float: right;
+}
 
 .charmander{
   width:168px;
