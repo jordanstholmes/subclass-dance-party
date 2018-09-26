@@ -2,7 +2,11 @@ var makeSquirtleDancer = function(top, left, timeBetweenSteps) {
   this.$node = $('<img src="assets/squirtle-cool.png" class="dancer squirtle">');
   makeDancer.apply(this, arguments);
   this.jump();
+  this.$node.click(function() {
+  });
 };
+
+
 
 makeSquirtleDancer.prototype = Object.create(makeDancer.prototype);
 makeSquirtleDancer.prototype.constructor = makeSquirtleDancer;
